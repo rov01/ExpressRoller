@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+/**
+ *  two params to modify. press tabs 1st : dirname 2nd : index file dir 
+ * 
+ **/
+
+var express 	= require('express'),
+	bodyParser 	= require('body-parser'),
+	morgan 		= require('morgan'),
+	port 		= process.env.PORT || 3000, 
+	app 		= express()
+
+app.use(bodyParser.urlencode({extend : true})); /* parse application/x-www-form-urlencoded */
+app.use(bodyParser.json()); /* json parser middleware */
+app.use(express.static(__dirname + ${1:'./public'})); /* setting static file */
+app.use(express.static(__dirname + ${2:'./view'}));
+app.get('/',function(req,res){ /* initiate the first page */
+	res.sendfile(${3:'./view/index.html'});
+});
+
+app.listen(port,function(){ /* start express app  server */
+	console.log("app is listening on port" + port)
+})
+]]></content>
+	<tabTrigger>$ep_app_g</tabTrigger>
+	<scope>source.js</scope>
+	<description>quick start to build a express server</description>
+</snippet>

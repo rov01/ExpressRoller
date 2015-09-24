@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+res.render('${1:...}', { ${2:varb} : ${3:'...'} } function(err,html){
+	//...
+	res.send(html);
+})
+]]></content>
+	<tabTrigger>$ep_render</tabTrigger>
+	<scope>source.js</scope>
+	<description>respond render method</description>
+</snippet>

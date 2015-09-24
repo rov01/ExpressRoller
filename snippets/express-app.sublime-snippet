@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+var app$1 = express();
+
+app$1.get('/$2',function(req,res,next){
+	console.log($3...)
+	res.send('hello world')
+})
+]]></content>
+	<tabTrigger>$ep_app</tabTrigger>
+	<scope>source.js</scope>
+	<description>small app with get router</description>
+</snippet>

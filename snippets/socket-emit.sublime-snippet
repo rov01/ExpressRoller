@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+socket.emit('{$1:event}',{...});
+]]></content>
+	<tabTrigger>$st_emit</tabTrigger>
+	<scope>source.js</scope>
+	<description>socket.io emit function</description>
+</snippet>

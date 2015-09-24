@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+var port = ${1:3000} 
+
+app.listen(port,function(){
+	console.log("app is listening on port" + port)
+})
+]]></content>
+	<tabTrigger>$ep_listen</tabTrigger>
+	<scope>source.js</scope>
+	<description>listen function default port : 3000</description>
+</snippet>

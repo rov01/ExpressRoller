@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+app.delete('/$1',function(req,res,next){
+	console.log($2...)
+	res.send({$3...})
+})
+]]></content>
+	<tabTrigger>$ep_delete</tabTrigger>
+	<scope>source.js</scope>
+	<description>put delete</description>
+</snippet>

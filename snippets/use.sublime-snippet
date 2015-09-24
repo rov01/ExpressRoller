@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+app.use('/$1',function(req,res,next){
+	console.log($2...)
+})
+]]></content>
+	<tabTrigger>$ep_use</tabTrigger>
+	<scope>source.js</scope>
+	<description>use router</description>
+</snippet>

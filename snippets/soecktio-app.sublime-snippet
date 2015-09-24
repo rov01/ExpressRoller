@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+var io = require('socket.io')(server);
+
+io.on('connection', function (socket) {
+
+  io.emit('news', { hello: 'world' });
+  
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+
+  soecket.on('disconnect',function(){
+  	io.emit('user disconnect')
+  });
+
+});
+
+]]></content>
+	<tabTrigger>$st_app</tabTrigger>
+	<scope>source.js</scope>
+	<description>socket.io app generator</description>
+</snippet>

@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+app.use('/$1',function(req,res,next){
+	next();
+})
+
+app.get('/$1',function(req,res){
+	res.send({});
+});
+
+app.post('/$1',function(req,res){
+	res.send({});
+});
+
+app.get('/$1:id',function(req,res){
+	res.send({});
+})
+
+app.put('/$1:id',function(req,res){
+	res.send({});
+});
+
+app.delete('/$1:id',function(req,res){
+	res.send({});
+})
+]]></content>
+	<tabTrigger>$ep_restful</tabTrigger>
+	<scope>source.js</scope>
+	<description>RESTful api get post put delete</description>
+</snippet>

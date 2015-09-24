@@ -1,0 +1,61 @@
+<snippet>
+	<content><![CDATA[
+var $SELECTION$1 = require('../models/$SELECTION$1');
+
+app.get('/${SELECTION/(.)/\L\1\E/g}$2',function(req,res,next){
+	$SELECTION$1.find({}).exec(function(err,data){
+		if(err){
+			return err
+		} else {
+		   res.json(data);
+		}
+	});
+});
+
+app.post('/${SELECTION/(.)/\L\1\E/g}$2/new',function(req,res){
+	var ${SELECTION/(.)/\L\1\E/g}$1 = new $SELECTION$1(req.body);
+	${SELECTION/(.)/\L\1\E/g}$1.save(function(err){
+		if(err){
+			return err;
+		};
+	});
+});
+
+app.get('/${SELECTION/(.)/\L\1\E/g}$2/:id',function(req,res,next){
+	$SELECTION$1.findOne({
+		_id : req.params.id
+	},function(err,data){
+		if(err){
+		 	return err
+		} else {
+			res.json(data);
+		};
+	});
+});
+
+app.put('/${SELECTION/(.)/\L\1\E/g}$2/:id/edit',function(req,res){
+	$SELECTION$1.findOneAndUpdate({
+	 	_id : req.params.id
+	},function(err,data){
+	 	if(err){
+	 		return err;
+	 	}else {
+	 	 	res.json(data);
+	 	};
+	});
+});
+
+app.delete('/${SELECTION/(.)/\L\1\E/g}$2/:id',function(req,res){
+	$SELECTION$1.remove({
+		_id : req.params.id
+	},function(err){
+		if(err){
+			return err;
+		};
+	})
+});
+]]></content>
+	<tabTrigger>$ep_scaffold_m</tabTrigger>
+	<scope>source.js</scope>
+	<description>Use model to build RESTful api</description>
+</snippet>

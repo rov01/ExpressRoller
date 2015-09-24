@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+app.set('$1...',$2...)
+
+app.get('$1...')
+]]></content>
+	<tabTrigger>$ep_set</tabTrigger>
+	<scope>source.js</scope>
+	<description>express set and get</description>
+</snippet>

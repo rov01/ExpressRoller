@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+app.all('*',function(req,res,next){
+	$1//..
+})
+]]></content>
+	<tabTrigger>$ep_all</tabTrigger>
+	<scope>source.js</scope>
+	<description>put router</description>
+</snippet>
